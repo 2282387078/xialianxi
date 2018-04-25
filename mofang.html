@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/mofang.css"/>
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+				/*transform-style: preserve-3d;*/
+			}
+			.mf{
+				transform-style: preserve-3d;
+				transition: all 2s linear ;
+			}
+			.mf>.d1{
+				transition: all 2s linear  ;
+			}
+			.mf>.d1.front{
+				background-image: url(img/yqh1.jpg);
+				transform: translate3d(0,0,95px);
+			}
+			.mf>.d1.back{
+				background-image: url(img/yqh2.jpg);
+				transform:rotateY(180deg) translate3d(0,0,95px);
+			}
+			.mf>.d1.left{
+				background-image: url(img/yqh3.jpg);
+				transform:rotateY(90deg) translate3d(0,0,95px);
+			}
+			.mf>.d1.right{
+				background-image: url(img/yqh4.jpg);
+				transform:rotateY(-90deg) translate3d(0,0,95px);
+			}
+			.mf>.d1.up{
+				background-image: url(img/yqh5.jpg);
+				transform:rotateX(90deg) translate3d(0,0,95px);
+			}
+			.mf>.d1.down{
+				background-image: url(img/yqh6.jpg);
+				transform:rotateX(-90deg) translate3d(0,0,95px);
+			}
+			.mf:hover{
+				transform: rotate3d(1,1,1,360deg);
+			}
+			.mf:hover>.up{
+				transform: rotateX(90deg) translate3d(0,0,95px) translate3d(0,0,80px);
+			}
+			.mf:hover>.down{
+				transform: rotateX(-90deg) translate3d(0,0,95px) translate3d(0,0,80px);
+			}
+			
+			.mf:hover>.left{
+				transform: rotateY(90deg) translate3d(0,0,95px) translate3d(0,0,80px);
+			}
+			.mf:hover>.right{
+				transform: rotateY(-90deg) translate3d(0,0,95px) translate3d(0,0,80px);
+			}
+			
+			.mf:hover>.front{
+				transform: translate3d(0,0,95px) translate3d(0,0,80px);
+			}
+			.mf:hover>.back{
+				transform: rotateY(180deg) translate3d(0,0,95px) translate3d(0,0,80px);
+			}
+			#left:checked+label{
+				background: deepskyblue;
+				color: #fff;
+				font-size: larger;
+			}
+			#left:checked~.mf{
+				transform: rotateY(90deg) /*translate3d(0,0,180px)*/;
+				/*opacity: 1;*/
+			}
+			}
+			#right:checked+label{
+				background: deepskyblue;
+				color: #fff;
+				font-size: larger;
+			}
+			#right:checked~.mf{
+				transform: rotateY(-90deg) translate3d(0,0,180px);
+				opacity: 1;
+			}
+			#up:checked+label{
+				background: deepskyblue;
+				color: #fff;
+				font-size: larger;
+			}
+			#up:checked~.mf{
+				transform: rotateX(90deg) /*translate3d(0,0,180px)*/;
+				opacity: 1;
+			}
+			#down:checked+label{
+				background: deepskyblue;
+				color: #fff;
+				font-size: larger;
+			}
+			#down:checked~.mf{
+				transform: rotateX(-90deg) translate3d(0,0,300px);
+				opacity: 1;
+			}
+			#front:checked+label{
+				background: deepskyblue;
+				color: #fff;
+				font-size: larger;
+			}
+			#front:checked~.mf{
+				transform: translate3d(0,0,300px);
+				opacity: 1;
+			}
+			#back:checked+label{
+				background: deepskyblue;
+				color: #fff;
+				font-size: larger;
+			}
+			#back:checked~.mf{
+				transform: rotateY(180deg) translate3d(0,0,180px);
+				/*///*/
+				opacity: 0.9;
+				/*???*/
+			}
+				
+		</style>
+	</head>
+	<body>
+		<!--<div class="xuank">-->
+			<!--////-->
+			<input id="left"  type="checkbox"  />
+			<label for="left">左面</label>
+			<input type="checkbox" id="right"  />
+			<label for="right">右面</label>
+			<input type="checkbox" id="up"  />
+			<label for="up">上面</label>
+			<input type="checkbox" id="down"  />
+			<label for="down">下面</label>
+			<input type="checkbox" id="front"  />
+			<label for="front">前面</label>
+			<input type="checkbox" id="back"  />
+			<label for="back">后面</label>
+			
+		<!--</div>-->
+		<div class="mf">
+			<div class="d1 up"></div>
+			<div class="d1 down"></div>
+			<div class="d1 left"></div>
+			<div class="d1 right"></div>
+			<div class="d1 front"></div>
+			<div class="d1 back"></div>
+		</div>
+	</body>
+</html>

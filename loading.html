@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		.d1{
+			margin: 50px auto;
+			padding: 0;
+			box-sizing: border-box;
+			width: 300px;
+			height: 300px;
+			border: 1px dotted  skyblue;
+			animation: d1 3s alternate;
+			position: relative;
+			
+		}
+		/*@-moz-keyframes name{
+			from{<span style="background: #eee;">1</span>}
+			to{<span style="background: #000;">4</span>}
+		}*/
+		.d1>span{
+			display: inline-block;
+			margin: cencer;
+			width: 50px;
+			height: 50px;
+			border: 1px dashed red;
+			position: absolute;
+		}
+		.mo1{
+			top: 90px;
+			left: 90px;
+			animation: ad1 2s linear 0s infinite alternate;
+		}
+		@keyframes ad1{
+			0%{ background: #333;}
+			25%{ background: #666;}
+			50%{ background: #999;}
+			75%{ background: #bbb;}
+			100%{ background: #eee;}
+		}
+		.mo2{
+			top: 90px;
+			right: 90px;
+			animation: ad2 2s linear 0.3s infinite alternate;
+		}
+		@keyframes ad2{
+			0%{ background: #333;}
+			25%{ background: #666;}
+			50%{ background: #999;}
+			75%{ background: #bbb;}
+			100%{ background: #eee;}
+		}
+		.mo3{
+			top: 160px;
+			left: 90px;
+			animation: ad3 2s linear 0.6s infinite alternate;
+		}
+		@keyframes ad3{
+			0%{ background: #333;}
+			25%{ background: #666;}
+			50%{ background: #999;}
+			75%{ background: #bbb;}
+			100%{ background: #eee;}
+		}
+		.mo4{
+			top: 160px;
+			right: 90px;
+			animation: ad4 2s linear 0.9s infinite alternate;
+		}
+		@keyframes ad4{
+			0%{ background: #333;}
+			25%{ background: #666;}
+			50%{ background: #999;}
+			75%{ background: #bbb;}
+			100%{ background: #eee;}
+		}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="d1">
+			<span class="mo1" <!--style="background: #eee;"-->>1</span>
+			<span  class="mo2" <!-- style="background: #aaa;"-->>2</span>
+			<span  class="mo3" <!-- style="background: #666;"-->>3</span>
+			<span  class="mo4" <!--style="background: #000;"-->>4</span>
+		</div>
+	</body>
+</html>
